@@ -6,16 +6,72 @@
     <title>Css Practice</title>
     <style>
     h1{
-        color: aqua;
-        border: 2px dashed green;
-        width: 50%;
+        color: rgb(12, 20, 20);
+        border: 2px double  green;
+        padding: 20px;
         text-align: center;
-        background-color: blueviolet;
-        cursor: pointer;
+        background-color: rgb(241, 238, 244);
+    
     }
+    table{
+        margin-left: 20px;
+        background-color: antiquewhite;
+        width: 40%;
+    }
+ 
+    *{
+        background-color:cornflowerblue;
+    }
+    .marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.marquee h1 {
+    display: inline-block;
+    padding-right: 100%;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
     </style>
 </head>
 <body>
-    <h1>My Heading.</h1>
+    <div class="marquee">
+    <h1>VIMAL</h1>
+</div>
+    <table border="1" >
+        <tr>
+            <th>Eid</th>
+            <th>Ename</th>
+            <th>Esalary</th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>vimal</td>
+            <td>20000</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>vignesh</td>
+            <td>30000</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>vishnu</td>
+            <td>40000</td>
+        </tr>
+    </table>
 </body>
 </html>
