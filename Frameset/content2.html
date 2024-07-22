@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegFormStyle</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse; 
+            border: 2px solid #4CAF50; 
+        }
+            
+        th, td {
+            border: 1px solid #ddd; 
+            padding: 8px; 
+            text-align: left; 
+        }
+        
+        th {
+            background-color: #4CAF50; 
+            color: white;
+            font-weight: bold; 
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2; 
+        }
+        
+        tr:hover {
+            background-color: #ddd; 
+        }
+        
+        td {
+            vertical-align: middle; 
+        }
+
+        .highlight {
+            background-color: #ffeb3b; 
+        }   
+    </style>
+</head>
+<body>
+    <center>
+        <table border="1" class="tableclass" >
+            <tr>
+                <div>
+                    <th colspan="2">Registration Form</th>
+                </div>
+            </tr>
+            <tr>
+            <tr>
+                <div>
+               <td> <label for="studname">Student Name</label></td>
+                <td><input type="text" id="studname"></td>
+            </tr>
+            </div>
+            <tr>
+            <div>
+                <td>
+                    <label for="Fathname">Father's Name</label>
+                </td>
+                <td>
+                    <input type="text" id="Fathname">
+                </td>
+            </tr>
+            </div>
+            <div>
+                <td>
+                    <label for="Mothname">Mother's Name</label>
+                </td>
+                <td>
+                    <input type="text" id="Mothname">
+                </td>
+            </tr>
+            </div>
+            <div>
+                <td>
+                    <label for="dob">Date Of Birth</label>
+                </td>
+                <td>
+                    <input type="date" id="dob">
+                </td>
+            </tr>
+            </div>
+            <div>
+                <tr>
+               <td><label for="gender" id ="gender" name="gender">Gender
+                <label>
+                </td> 
+                <td>
+                    <input type="radio" name="language" id="gender"value="male">
+                    Male
+                </label>
+                <label>
+                    <input type="radio" name="language"id="gender" value="female">
+                    Female
+                </label>
+            </td>
+            </tr>
+        </diV>
+        <div>
+            <tr>
+                <td><label for="email" >Email:</td>
+                    <td>
+                    <input type="email" id="email" name="email">
+                </label>
+            </td>
+            </tr>
+        </div>
+        <div>
+            <tr>
+                <td>
+                    <label for="number">Contact No:
+                 </td>
+                 <td>
+                        <input type ="number" id="number" name="number">
+                </td>
+            </tr>
+        </div>
+       
+            <div>
+                <tr>
+                    <td>
+                        <label for="Address">Address</label>
+                    </td>
+                    <td>
+                        <textarea id="Address"></textarea>
+                    </td>
+                </tr>
+            </div>
+            <div>
+                <tr>
+                    <td>
+                        <label for="State">State</label>
+                    </td>
+                    <td>
+                        <input type="text" id="State">
+                    </td>
+                </tr>
+            </div>
+             <div>
+                <tr>
+                    <td>
+                        <label for="city" >City</label>
+                    </td>
+                    <td>
+                        <input type="text" id="city"> 
+                    </td>
+                </tr>
+             </div>
+             <div>
+                <tr>
+                    <td style="text-align: center;"colspan="2">
+                        <input type="submit" >
+                    </td>
+                </tr>
+             </div>
+            </table>
+        </center>
+</body>
+</html>
