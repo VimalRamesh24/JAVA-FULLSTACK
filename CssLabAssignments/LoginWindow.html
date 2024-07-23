@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .login {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .login img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%;
+            padding: 20px;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .text-overlay h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .overlay-1 {
+            margin: 10px 0;
+        }
+        .overlay-1 input[type="email"],
+        .overlay-1 input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .overlay-1 input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .login-button input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .login-button input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="bg-img">
+            <img src="PcLoginPage.jpg" alt="Login Image">
+        </div>
+        <div class="text-overlay">
+            <h1>Login Window</h1>
+            <div class="overlay-1">
+                <input type="email" placeholder="Your Email Address" required id="email" name="email">
+            </div>
+            <div class="overlay-1">
+                <input type="password" placeholder="Your Password" required id="password" name="password">
+            </div>
+            <div class="overlay-1">
+                <input type="checkbox" id="check" name="terms">
+                <label for="check">Agree With Terms & Conditions</label>
+            </div>
+            <div class="login-button overlay-1">
+                <input type="submit" value="Login">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

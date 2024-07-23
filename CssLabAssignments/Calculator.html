@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: auto 0;
+            background-color: grey;
+        }
+        .calc {
+            background-color: grey;
+            margin: 230px;
+            display: grid;
+            align-items: center;
+            font-size: 35px;
+            color: aliceblue;
+            justify-content: center;
+            grid-template-columns: repeat(4, 100px); 
+            grid-template-rows: repeat(5, 100px); 
+        }
+        .calc div {
+            width: 93px;
+            text-align: center;
+            border-top: 3px solid black;
+            border-left: 3px solid black;            
+            border-radius: 4px;
+            justify-content: center;
+            height: 93px;
+
+        }
+        .num{
+         text-align: left;
+         width: 362px;
+         padding-bottom:10px;
+         border-left: 2px solid black;
+         border-top: 2px solid black;
+         border-bottom: 2px solid gray;
+         padding-left: 30px;
+         margin-top: 10%;
+         border-radius: 3px;
+         margin-left: 510px;
+         margin-top:230px;
+         background-color: white;
+         margin-bottom: -16%;
+        }
+
+        .blue {
+            background-color: rgb(83, 195, 243);
+            text-align: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <div class="num"> 
+            <p>0</p>
+        </div>
+    <div class="calc">
+        
+         <div class="blue">C</div>
+         <div class="blue">%</div>
+         <div class="blue"><span><=</span></div>
+         <div class="blue">/</div>
+         <div class="blue">7</div>
+         <div class="blue">8</div>
+         <div class="blue">9</div>
+         <div class="blue">*</div>
+         <div class="blue">4</div>
+         <div class="blue">5</div>
+         <div class="blue">6</div>
+         <div class="blue">-</div>
+         <div class="blue">1</div>
+         <div class="blue">2</div>
+         <div class="blue">3</div>
+         <div class="blue">+</div>
+         <div class="blue">00</div>
+         <div class="blue">0</div>
+         <div class="blue">.</div>
+         <div class="blue">=</div>
+    </div>
+</div>
+</body>
+</html>
