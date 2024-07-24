@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function MyFunc()
+    {
+     document.write("<b>Example for javascript Function<b>");
+     }
+     function Add(a,b)
+     {
+        let sum = a+b;
+        alert("Addition :"+sum);
+     }
+     function Sub(a,b)
+     {
+        let sum2 = a-b;
+
+        alert("Substraction :"+sum2);
+     }
+     function Mul(a,b)
+     {
+        let sum3 = a*b;
+    
+        alert("Multiplication :"+sum3);
+     }
+     function Div(a,b)
+     {
+        let sum4 = a/b;
+
+        alert("Divide :"+sum4);
+     }
+    function conf()
+    {
+        confirm("Do you continue the JavaFullstack Program");
+    }
+    function PromptEg()
+    {
+        let name=prompt("Enter Your Name:");
+        alert("welcome ,"+name);
+    }
+     </script>
+</head>
+<body>
+   <button onclick="MyFunc()">ClickMe</button>
+   <button onclick="Add(10,5)">AddButton</button>
+   <button onclick=Sub(10,5)>SubButton</button>
+   <button onclick=Mul(10,5)>MulButton</button>
+   <button onclick=Div(10,5)>DivButton</button>
+   <button onclick="conf()">ContinueFunc</button>
+   <button onclick="PromptEg()">greet</button>
+   
+</body>
+</html>

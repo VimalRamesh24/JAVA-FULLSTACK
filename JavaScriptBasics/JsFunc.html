@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function MyFunc()
+    {
+     document.write("<b>Example for javascript Function<b>");
+     }
+     function Add(a,b)
+     {
+        let sum = a+b;
+        document.write("Addition :"+ sum);
+     }
+     function Sub(a,b)
+     {
+        let sum2 = a-b;
+        document.write("Substraction :"+ sum2);
+     }
+     function Mul(a,b)
+     {
+        let sum3 = a*b;
+        document.write("Multiplication :"+ sum3);
+     }
+     function Div(a,b)
+     {
+        let sum4 = a/b;
+        document.write("Divide :"+ sum4);
+     }
+     
+    </script>
+</head>
+<body>
+   <button onclick="MyFunc()">ClickMe</button>
+   <button onclick=Add(10,5)>AddButton</button>
+   <button onclick=Sub(10,5)>SubButton</button>
+   <button onclick=Mul(10,5)>MulButton</button>
+   <button onclick=Div(10,5)>DivButton</button>
+</body>
+</html>
