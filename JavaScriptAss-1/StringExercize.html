@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions Demonstration</title>
+    <script>
+        function demonstrateStringFunctions() {
+            const str = "   Hello, World! This is a JavaScript string demonstration.   ";
+
+            const length = str.length;
+            const charAt5 = str.charAt(5);
+            const sliceExample = str.slice(7, 12);
+            const substringExample = str.substring(7, 12);
+            const substrExample = str.substr(7, 5);
+            const upperCase = str.toUpperCase();
+            const lowerCase = str.toLowerCase();
+            const concatExample = str.concat(" Extra text.");
+            const trimmed = str.trim();
+            const trimmedStart = str.trimStart();
+            const trimmedEnd = str.trimEnd();
+            const repeatExample = str.repeat(2);
+            const replaceExample = str.replace("World", "Universe");
+            const replaceAllExample = str.replaceAll(" ", "_");
+            const splitExample = str.split(" ");
+
+            document.getElementById("results").innerHTML = `
+                <h2>String Functions Demonstration</h2>
+                <p><strong>Original String:</strong> "${str}"</p>
+                <p><strong>Length:</strong> ${length}</p>
+                <p><strong>charAt(5):</strong> "${charAt5}"</p>
+                <p><strong>slice(7, 12):</strong> "${sliceExample}"</p>
+                <p><strong>substring(7, 12):</strong> "${substringExample}"</p>
+                <p><strong>substr(7, 5):</strong> "${substrExample}"</p>
+                <p><strong>toUpperCase:</strong> "${upperCase}"</p>
+                <p><strong>toLowerCase:</strong> "${lowerCase}"</p>
+                <p><strong>concat:</strong> "${concatExample}"</p>
+                <p><strong>trim:</strong> "${trimmed}"</p>
+                <p><strong>trimStart:</strong> "${trimmedStart}"</p>
+                <p><strong>trimEnd:</strong> "${trimmedEnd}"</p>
+                <p><strong>repeat(2):</strong> "${repeatExample}"</p>
+                <p><strong>replace("World", "Universe"):</strong> "${replaceExample}"</p>
+                <p><strong>replaceAll(" ", "_"):</strong> "${replaceAllExample}"</p>
+                <p><strong>split(" "):</strong> [${splitExample.map(s => `"${s}"`).join(", ")}]</p>
+            `;
+        }
+    </script>
+</head>
+<body onload="demonstrateStringFunctions()">
+    <div id="results"></div>
+</body>
+</html>

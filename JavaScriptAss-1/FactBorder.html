@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Calculator</title>
+    <script>
+        const factorial = (n) => {
+            if (n < 0) {
+                return "Factorial is not defined for negative numbers.";
+            }
+            let result = 1;
+            for (let i = 1; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        }
+
+        const displayFactorial = () => {
+            const number = Number(document.getElementById("numberInput").value);
+            if (isNaN(number) || number < 1) {
+                document.getElementById("result").innerText = "Please enter a positive integer.";
+                return;
+            }
+
+            let tableHTML = `
+                <table border='1' style='width:50%; border-collapse:collapse;'>
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>Factorial</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            for (let i = 1; i <= number; i++) {
+                tableHTML += `
+                    <tr>
+                        <td>${i}</td>
+                        <td>${factorial(i)}</td>
+                    </tr>
+                `;
+            }
+
+            tableHTML += `
+                    </tbody>
+                </table>
+            `;
+            
+            document.getElementById("result").innerHTML = tableHTML;
+        }
+    </script>
+</head>
+<body>
+   <h1>Enter a Number:</h1>
+   <input type="number" id="numberInput" placeholder="Enter a Positive Number :"/>
+   <button onclick="displayFactorial()">Calculate Factorials</button>
+   <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Events</title>
+  <style>
+    .hover-element {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Events Demonstrations</h1>
+
+  <button id="clickButton">Click Me!</button>  
+ 
+  <div class="hover-element" id="hoverDiv"></div>
+
+
+  <form id="myForm">
+    <input type="text" name="username" placeholder="Enter your name">
+    <button type="submit">Submit</button>
+  </form>
+
+
+  <input type="text" placeholder="Type something">
+
+
+  <h2>Resize the window</h2>
+
+
+  <h2>Page Load Event</h2>
+
+  <script>
+
+    document.getElementById('clickButton').addEventListener('click', function() {
+      alert('Button clicked!');
+    });
+
+    document.getElementById('hoverDiv').addEventListener('mouseover', function() {
+      this.style.backgroundColor = 'lightcoral';
+    });
+
+    document.getElementById('hoverDiv').addEventListener('mouseout', function() {
+      this.style.backgroundColor = 'lightblue';
+    });
+
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      alert('Form submitted!');
+    });
+    document.addEventListener('keydown', function(event) {
+      console.log('Key pressed: ', event.key);
+    });
+
+    window.addEventListener('resize', function() {
+      console.log('Window resized to: ', window.innerWidth, 'x', window.innerHeight);
+    });
+
+    window.addEventListener('load', function() {
+      console.log('Page fully loaded');
+    });
+  </script>
+</body>
+</html>

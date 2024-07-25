@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h1>Add Two Numbers</h1>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="performAddition()">Add</button>
+    <p id="result"></p>
+
+    <h2>Subtract Two Numbers</h2>
+    <input type="number" id="num3" placeholder="Enter first number">
+    <input type="number" id="num4" placeholder="Enter second number">
+    <button onclick="performSubtraction()">Subtract</button>
+    <p id="result2"></p>
+
+    <h2>Multiply Two Numbers</h2>
+    <input type="number" id="num5" placeholder="Enter first number">
+    <input type="number" id="num6" placeholder="Enter second number">
+    <button onclick="performMultiplication()">Multiply</button>
+    <p id="result3"></p>
+
+    <h2>Divide Two Numbers</h2>
+    <input type="number" id="num7" placeholder="Enter first number">
+    <input type="number" id="num8" placeholder="Enter second number">
+    <button onclick="performDivision()">Divide</button>
+    <p id="result4"></p>
+    
+    <script>
+        const performAddition = () => {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById('result').innerText = `Addition: ${num1 + num2}`;
+        };
+
+        const performSubtraction = () => {
+            const num3 = parseFloat(document.getElementById('num3').value);
+            const num4 = parseFloat(document.getElementById('num4').value);
+            document.getElementById('result2').innerText = `Subtraction: ${num3 - num4}`;
+        };
+
+        const performMultiplication = () => {
+            const num5 = parseFloat(document.getElementById('num5').value);
+            const num6 = parseFloat(document.getElementById('num6').value);
+            document.getElementById('result3').innerText = `Multiplication: ${num5 * num6}`;
+        };
+
+        const performDivision = () => {
+            const num7 = parseFloat(document.getElementById('num7').value);
+            const num8 = parseFloat(document.getElementById('num8').value);
+            if (num8 === 0) {
+                document.getElementById('result4').innerText = 'Division by zero is not allowed';
+            } else {
+                document.getElementById('result4').innerText = `Division: ${num7 / num8}`;
+            }
+        };
+    </script>
+</body>
+</html>
