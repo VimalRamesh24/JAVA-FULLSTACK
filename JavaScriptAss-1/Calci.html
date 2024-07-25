@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .calculator {
+            display: grid;
+            gap: 10px;
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        #display {
+            width: 100%;
+            height: 80px;
+            font-size: 2em;
+            text-align: right;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .button {
+            font-size: 1.5em;
+            height: 80px;
+            border-radius: 4px;
+            border: 2px solid black;
+            background-color: rgb(83, 195, 243);
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: rgb(67, 151, 204);
+        }
+        .button.operator {
+            background-color: rgb(42, 133, 207);
+        }
+        .button.operator:hover {
+            background-color: rgb(8, 99, 204);
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" disabled />
+        <div class="buttons">
+            <button value="C" class="button operator" onclick="calc('C')">C</button>
+            <button value="%" class="button operator" onclick="calc('%')">%</button>
+            <button value="<=" class="button operator" onclick="calc('<=')"><=</button>
+            <button value="/" class="button operator" onclick="calc('/')">/</button>
+            <button value="7" class="button" onclick="calc('7')">7</button>
+            <button value="8" class="button" onclick="calc('8')">8</button>
+            <button value="9" class="button" onclick="calc('9')">9</button>
+            <button value="*" class="button operator" onclick="calc('*')">*</button>
+            <button value="4" class="button" onclick="calc('4')">4</button>
+            <button value="5" class="button" onclick="calc('5')">5</button>
+            <button value="6" class="button" onclick="calc('6')">6</button>
+            <button value="-" class="button operator" onclick="calc('-')">-</button>
+            <button value="1" class="button" onclick="calc('1')">1</button>
+            <button value="2" class="button" onclick="calc('2')">2</button>
+            <button value="3" class="button" onclick="calc('3')">3</button>
+            <button value="+" class="button operator" onclick="calc('+')">+</button>
+            <button value="00" class="button" onclick="calc('00')">00</button>
+            <button value="0" class="button" onclick="calc('0')">0</button>
+            <button value="." class="button" onclick="calc('.')">.</button>
+            <button value="=" class="button operator" onclick="calc('=')">=</button>
+        </div>
+    </div>
+
+    <script>
+        const calc = (val) => {
+            let display = document.getElementById("display");
+            if (val === 'C') {
+                display.value = '';
+            } else if (val === '=') {
+                try {
+                    display.value = eval(display.value);
+                } catch (e) {
+                    display.value = 'Error';
+                }
+            } else {
+                display.value += val;
+            }
+        };
+    </script>
+</body>
+</html>
